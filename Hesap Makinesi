@@ -1,0 +1,22 @@
+def hesapMakinesi(a,b,islem):
+    
+    if islem not in "+-/*":
+        return "Lütfen şu işlemlerden birini giriniz: +,-,*,/"
+    
+    if islem == "+":
+        return (str(a)+ "+" + str(b) + "=" + str(a+b))
+    if islem == "-":
+        return (str(a)+ "-" + str(b) + "=" + str(a-b))
+    if islem == "*":
+        return (str(a)+ "*" + str(b) + "=" + str(a*b))
+    if islem == "/":
+        return (str(a)+ "/" + str(b) + "=" + str(a/b))
+    
+while True: #hesaplamada sürekliliği sağlamak için
+    try:
+        a = int(input ("Bir sayi giriniz: "))
+        b = int(input ("Diger sayiyi giriniz: "))
+        islem = input ("Yapmak istediğiniz islemi giriniz: ")
+        print(hesapMakinesi(a,b,islem))
+    except:
+        print("Lütfen geçerli bir sayi girin")
